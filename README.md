@@ -13,6 +13,7 @@ These are spaces on HuggingFace and their code is not visible on GitHub.
 
 At the moment of documenting this, the following agents (running on HF spaces) are publicly available to try out:
 - https://huggingface.co/spaces/almightyt/First_agent_template
+    - Uses https://huggingface.co/docs/smolagents/reference/agents#smolagents.CodeAgent
 
 ### Sub-Repositories Setup Notes
 
