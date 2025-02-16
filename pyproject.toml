@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "repetitioestmaterstudiorum", email = "44611591+repetitioestmaterstudiorum@users.noreply.github.com"},
 ]
-dependencies = []
+dependencies = ["huggingface-hub>=0.28.1"]
 requires-python = "==3.13.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +13,9 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+]
