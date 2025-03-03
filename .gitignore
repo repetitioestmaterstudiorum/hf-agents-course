@@ -178,4 +178,4 @@ cython_debug/
 .pdm-python
 
 # Project-specific
-mrpc-output/
+trainer_output/
