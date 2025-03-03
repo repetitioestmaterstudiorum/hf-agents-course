@@ -5,8 +5,8 @@ description = "Default template for PDM package"
 authors = [
     {name = "repetitioestmaterstudiorum", email = "44611591+repetitioestmaterstudiorum@users.noreply.github.com"},
 ]
-dependencies = ["huggingface-hub>=0.28.1"]
-requires-python = "==3.13.*"
+dependencies = ["torch>=2.6.0", "transformers>=4.49.0", "huggingface-hub>=0.29.1", "tqdm>=4.67.1", "datasets>=3.3.2", "accelerate>=1.4.0"]
+requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
 
@@ -18,4 +18,6 @@ distribution = false
 dev = [
     "ipykernel>=6.29.5",
     "ipywidgets>=8.1.5",
+    "nbformat>=5.10.4",
+    "plotly>=6.0.0",
 ]
