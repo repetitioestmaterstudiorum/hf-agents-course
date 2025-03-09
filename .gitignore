@@ -179,3 +179,4 @@ cython_debug/
 
 # Project-specific
 trainer_output/
+wandb/

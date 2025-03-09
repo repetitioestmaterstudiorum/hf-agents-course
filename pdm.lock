@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:1d91c8251d75eb87d5f30e65d9923e5041fe119f2b7559ab5fede45c44c72fe8"
+content_hash = "sha256:927e36c0dcd552e6c18ca6c53993120935aad1b21f0f108729aea204ee78bd39"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -89,6 +89,20 @@ dependencies = [
 files = [
     {file = "aiosignal-1.3.2-py2.py3-none-any.whl", hash = "sha256:45cde58e409a301715980c2b01d0c28bdde3770d8290b5eb2173759d9acb31a5"},
     {file = "aiosignal-1.3.2.tar.gz", hash = "sha256:a8c255c66fafb1e499c9351d0bf32ff2d8a0321595ebac3b93713656d2436f54"},
+]
+
+[[package]]
+name = "annotated-types"
+version = "0.7.0"
+requires_python = ">=3.8"
+summary = "Reusable constraint types to use with typing.Annotated"
+groups = ["default"]
+dependencies = [
+    "typing-extensions>=4.0.0; python_version < \"3.9\"",
+]
+files = [
+    {file = "annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"},
+    {file = "annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"},
 ]
 
 [[package]]
@@ -186,6 +200,21 @@ files = [
 ]
 
 [[package]]
+name = "click"
+version = "8.1.8"
+requires_python = ">=3.7"
+summary = "Composable command line interface toolkit"
+groups = ["default"]
+dependencies = [
+    "colorama; platform_system == \"Windows\"",
+    "importlib-metadata; python_version < \"3.8\"",
+]
+files = [
+    {file = "click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"},
+    {file = "click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"},
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
@@ -273,6 +302,19 @@ groups = ["default"]
 files = [
     {file = "dill-0.3.8-py3-none-any.whl", hash = "sha256:c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7"},
     {file = "dill-0.3.8.tar.gz", hash = "sha256:3ebe3c479ad625c4553aca177444d89b486b1d84982eeacded644afc0cf797ca"},
+]
+
+[[package]]
+name = "docker-pycreds"
+version = "0.4.0"
+summary = "Python bindings for the docker credentials store API"
+groups = ["default"]
+dependencies = [
+    "six>=1.4.0",
+]
+files = [
+    {file = "docker-pycreds-0.4.0.tar.gz", hash = "sha256:6ce3270bcaf404cc4c3e27e4b6c70d3521deae82fb508767870fdbf772d584d4"},
+    {file = "docker_pycreds-0.4.0-py2.py3-none-any.whl", hash = "sha256:7266112468627868005106ec19cd0d722702d2b7d5912a28e19b826c3d37af49"},
 ]
 
 [[package]]
@@ -386,8 +428,37 @@ files = [
 ]
 
 [[package]]
+name = "gitdb"
+version = "4.0.12"
+requires_python = ">=3.7"
+summary = "Git Object Database"
+groups = ["default"]
+dependencies = [
+    "smmap<6,>=3.0.1",
+]
+files = [
+    {file = "gitdb-4.0.12-py3-none-any.whl", hash = "sha256:67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf"},
+    {file = "gitdb-4.0.12.tar.gz", hash = "sha256:5ef71f855d191a3326fcfbc0d5da835f26b13fbcba60c32c21091c349ffdb571"},
+]
+
+[[package]]
+name = "gitpython"
+version = "3.1.44"
+requires_python = ">=3.7"
+summary = "GitPython is a Python library used to interact with Git repositories"
+groups = ["default"]
+dependencies = [
+    "gitdb<5,>=4.0.1",
+    "typing-extensions>=3.7.4.3; python_version < \"3.8\"",
+]
+files = [
+    {file = "GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110"},
+    {file = "gitpython-3.1.44.tar.gz", hash = "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269"},
+]
+
+[[package]]
 name = "huggingface-hub"
-version = "0.29.1"
+version = "0.29.2"
 requires_python = ">=3.8.0"
 summary = "Client library to download and publish models, datasets and other repos on the huggingface.co hub"
 groups = ["default"]
@@ -401,8 +472,24 @@ dependencies = [
     "typing-extensions>=3.7.4.3",
 ]
 files = [
-    {file = "huggingface_hub-0.29.1-py3-none-any.whl", hash = "sha256:352f69caf16566c7b6de84b54a822f6238e17ddd8ae3da4f8f2272aea5b198d5"},
-    {file = "huggingface_hub-0.29.1.tar.gz", hash = "sha256:9524eae42077b8ff4fc459ceb7a514eca1c1232b775276b009709fe2a084f250"},
+    {file = "huggingface_hub-0.29.2-py3-none-any.whl", hash = "sha256:c56f20fca09ef19da84dcde2b76379ecdaddf390b083f59f166715584953307d"},
+    {file = "huggingface_hub-0.29.2.tar.gz", hash = "sha256:590b29c0dcbd0ee4b7b023714dc1ad8563fe4a68a91463438b74e980d28afaf3"},
+]
+
+[[package]]
+name = "huggingface-hub"
+version = "0.29.2"
+extras = ["cli"]
+requires_python = ">=3.8.0"
+summary = "Client library to download and publish models, datasets and other repos on the huggingface.co hub"
+groups = ["default"]
+dependencies = [
+    "InquirerPy==0.3.4",
+    "huggingface-hub==0.29.2",
+]
+files = [
+    {file = "huggingface_hub-0.29.2-py3-none-any.whl", hash = "sha256:c56f20fca09ef19da84dcde2b76379ecdaddf390b083f59f166715584953307d"},
+    {file = "huggingface_hub-0.29.2.tar.gz", hash = "sha256:590b29c0dcbd0ee4b7b023714dc1ad8563fe4a68a91463438b74e980d28afaf3"},
 ]
 
 [[package]]
@@ -414,6 +501,21 @@ groups = ["default"]
 files = [
     {file = "idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"},
     {file = "idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"},
+]
+
+[[package]]
+name = "inquirerpy"
+version = "0.3.4"
+requires_python = ">=3.7,<4.0"
+summary = "Python port of Inquirer.js (A collection of common interactive command-line user interfaces)"
+groups = ["default"]
+dependencies = [
+    "pfzy<0.4.0,>=0.3.1",
+    "prompt-toolkit<4.0.0,>=3.0.1",
+]
+files = [
+    {file = "InquirerPy-0.3.4-py3-none-any.whl", hash = "sha256:c65fdfbac1fa00e3ee4fb10679f4d3ed7a012abf4833910e63c295827fe2a7d4"},
+    {file = "InquirerPy-0.3.4.tar.gz", hash = "sha256:89d2ada0111f337483cb41ae31073108b2ec1e618a49d7110b0d7ade89fc197e"},
 ]
 
 [[package]]
@@ -617,6 +719,20 @@ files = [
 ]
 
 [[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+requires_python = ">=3.8"
+summary = "Python port of markdown-it. Markdown parsing, done right!"
+groups = ["default"]
+dependencies = [
+    "mdurl~=0.1",
+]
+files = [
+    {file = "markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"},
+    {file = "markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1"},
+]
+
+[[package]]
 name = "markupsafe"
 version = "3.0.2"
 requires_python = ">=3.9"
@@ -648,6 +764,17 @@ dependencies = [
 files = [
     {file = "matplotlib_inline-0.1.7-py3-none-any.whl", hash = "sha256:df192d39a4ff8f21b1895d72e6a13f5fcc5099f00fa84384e0ea28c2cc0653ca"},
     {file = "matplotlib_inline-0.1.7.tar.gz", hash = "sha256:8423b23ec666be3d16e16b60bdd8ac4e86e840ebd1dd11a30b9f117f2fa0ab90"},
+]
+
+[[package]]
+name = "mdurl"
+version = "0.1.2"
+requires_python = ">=3.7"
+summary = "Markdown URL utilities"
+groups = ["default"]
+files = [
+    {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
+    {file = "mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
 
 [[package]]
@@ -1015,11 +1142,22 @@ files = [
 ]
 
 [[package]]
+name = "pfzy"
+version = "0.3.4"
+requires_python = ">=3.7,<4.0"
+summary = "Python port of the fzy fuzzy string matching algorithm"
+groups = ["default"]
+files = [
+    {file = "pfzy-0.3.4-py3-none-any.whl", hash = "sha256:5f50d5b2b3207fa72e7ec0ef08372ef652685470974a107d0d4999fc5a903a96"},
+    {file = "pfzy-0.3.4.tar.gz", hash = "sha256:717ea765dd10b63618e7298b2d98efd819e0b30cd5905c9707223dceeb94b3f1"},
+]
+
+[[package]]
 name = "platformdirs"
 version = "4.3.6"
 requires_python = ">=3.8"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
-groups = ["dev"]
+groups = ["default", "dev"]
 files = [
     {file = "platformdirs-4.3.6-py3-none-any.whl", hash = "sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb"},
     {file = "platformdirs-4.3.6.tar.gz", hash = "sha256:357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"},
@@ -1045,7 +1183,7 @@ name = "prompt-toolkit"
 version = "3.0.50"
 requires_python = ">=3.8.0"
 summary = "Library for building powerful interactive command lines in Python"
-groups = ["dev"]
+groups = ["default", "dev"]
 dependencies = [
     "wcwidth",
 ]
@@ -1079,6 +1217,23 @@ files = [
     {file = "propcache-0.3.0-cp312-cp312-win_amd64.whl", hash = "sha256:2d15bc27163cd4df433e75f546b9ac31c1ba7b0b128bfb1b90df19082466ff57"},
     {file = "propcache-0.3.0-py3-none-any.whl", hash = "sha256:67dda3c7325691c2081510e92c561f465ba61b975f481735aefdfc845d2cd043"},
     {file = "propcache-0.3.0.tar.gz", hash = "sha256:a8fd93de4e1d278046345f49e2238cdb298589325849b2645d4a94c53faeffc5"},
+]
+
+[[package]]
+name = "protobuf"
+version = "5.29.3"
+requires_python = ">=3.8"
+summary = ""
+groups = ["default"]
+marker = "python_version > \"3.9\" or sys_platform != \"linux\""
+files = [
+    {file = "protobuf-5.29.3-cp310-abi3-win32.whl", hash = "sha256:3ea51771449e1035f26069c4c7fd51fba990d07bc55ba80701c78f886bf9c888"},
+    {file = "protobuf-5.29.3-cp310-abi3-win_amd64.whl", hash = "sha256:a4fa6f80816a9a0678429e84973f2f98cbc218cca434abe8db2ad0bffc98503a"},
+    {file = "protobuf-5.29.3-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:a8434404bbf139aa9e1300dbf989667a83d42ddda9153d8ab76e0d5dcaca484e"},
+    {file = "protobuf-5.29.3-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:daaf63f70f25e8689c072cfad4334ca0ac1d1e05a92fc15c54eb9cf23c3efd84"},
+    {file = "protobuf-5.29.3-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:c027e08a08be10b67c06bf2370b99c811c466398c357e615ca88c91c07f0910f"},
+    {file = "protobuf-5.29.3-py3-none-any.whl", hash = "sha256:0a18ed4a24198528f2333802eb075e59dea9d679ab7a6c5efb017a59004d849f"},
+    {file = "protobuf-5.29.3.tar.gz", hash = "sha256:5da0f41edaf117bde316404bad1a486cb4ededf8e4a54891296f648e8e076620"},
 ]
 
 [[package]]
@@ -1149,11 +1304,54 @@ files = [
 ]
 
 [[package]]
+name = "pydantic"
+version = "2.10.6"
+requires_python = ">=3.8"
+summary = "Data validation using Python type hints"
+groups = ["default"]
+dependencies = [
+    "annotated-types>=0.6.0",
+    "pydantic-core==2.27.2",
+    "typing-extensions>=4.12.2",
+]
+files = [
+    {file = "pydantic-2.10.6-py3-none-any.whl", hash = "sha256:427d664bf0b8a2b34ff5dd0f5a18df00591adcee7198fbd71981054cef37b584"},
+    {file = "pydantic-2.10.6.tar.gz", hash = "sha256:ca5daa827cce33de7a42be142548b0096bf05a7e7b365aebfa5f8eeec7128236"},
+]
+
+[[package]]
+name = "pydantic-core"
+version = "2.27.2"
+requires_python = ">=3.8"
+summary = "Core functionality for Pydantic validation and serialization"
+groups = ["default"]
+dependencies = [
+    "typing-extensions!=4.7.0,>=4.6.0",
+]
+files = [
+    {file = "pydantic_core-2.27.2-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:9e0c8cfefa0ef83b4da9588448b6d8d2a2bf1a53c3f1ae5fca39eb3061e2f0b0"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:83097677b8e3bd7eaa6775720ec8e0405f1575015a463285a92bfdfe254529ef"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:172fce187655fece0c90d90a678424b013f8fbb0ca8b036ac266749c09438cb7"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:519f29f5213271eeeeb3093f662ba2fd512b91c5f188f3bb7b27bc5973816934"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:05e3a55d124407fffba0dd6b0c0cd056d10e983ceb4e5dbd10dda135c31071d6"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:9c3ed807c7b91de05e63930188f19e921d1fe90de6b4f5cd43ee7fcc3525cb8c"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6fb4aadc0b9a0c063206846d603b92030eb6f03069151a625667f982887153e2"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:28ccb213807e037460326424ceb8b5245acb88f32f3d2777427476e1b32c48c4"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:de3cd1899e2c279b140adde9357c4495ed9d47131b4a4eaff9052f23398076b3"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-musllinux_1_1_armv7l.whl", hash = "sha256:220f892729375e2d736b97d0e51466252ad84c51857d4d15f5e9692f9ef12be4"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:a0fcd29cd6b4e74fe8ddd2c90330fd8edf2e30cb52acda47f06dd615ae72da57"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-win32.whl", hash = "sha256:1e2cb691ed9834cd6a8be61228471d0a503731abfb42f82458ff27be7b2186fc"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-win_amd64.whl", hash = "sha256:cc3f1a99a4f4f9dd1de4fe0312c114e740b5ddead65bb4102884b384c15d8bc9"},
+    {file = "pydantic_core-2.27.2-cp312-cp312-win_arm64.whl", hash = "sha256:3911ac9284cd8a1792d3cb26a2da18f3ca26c6908cc434a18f730dc0db7bfa3b"},
+    {file = "pydantic_core-2.27.2.tar.gz", hash = "sha256:eb026e5a4c1fee05726072337ff51d1efb6f59090b7da90d30ea58625b1ffb39"},
+]
+
+[[package]]
 name = "pygments"
 version = "2.19.1"
 requires_python = ">=3.8"
 summary = "Pygments is a syntax highlighting package written in Python."
-groups = ["dev"]
+groups = ["default", "dev"]
 files = [
     {file = "pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c"},
     {file = "pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"},
@@ -1298,6 +1496,22 @@ files = [
 ]
 
 [[package]]
+name = "rich"
+version = "13.9.4"
+requires_python = ">=3.8.0"
+summary = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+groups = ["default"]
+dependencies = [
+    "markdown-it-py>=2.2.0",
+    "pygments<3.0.0,>=2.13.0",
+    "typing-extensions<5.0,>=4.0.0; python_version < \"3.11\"",
+]
+files = [
+    {file = "rich-13.9.4-py3-none-any.whl", hash = "sha256:6049d5e6ec054bf2779ab3358186963bac2ea89175919d699e378b99738c2a90"},
+    {file = "rich-13.9.4.tar.gz", hash = "sha256:439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"},
+]
+
+[[package]]
 name = "rpds-py"
 version = "0.23.1"
 requires_python = ">=3.9"
@@ -1388,12 +1602,48 @@ files = [
 ]
 
 [[package]]
+name = "sentry-sdk"
+version = "2.22.0"
+requires_python = ">=3.6"
+summary = "Python client for Sentry (https://sentry.io)"
+groups = ["default"]
+dependencies = [
+    "certifi",
+    "urllib3>=1.26.11",
+]
+files = [
+    {file = "sentry_sdk-2.22.0-py2.py3-none-any.whl", hash = "sha256:3d791d631a6c97aad4da7074081a57073126c69487560c6f8bffcf586461de66"},
+    {file = "sentry_sdk-2.22.0.tar.gz", hash = "sha256:b4bf43bb38f547c84b2eadcefbe389b36ef75f3f38253d7a74d6b928c07ae944"},
+]
+
+[[package]]
+name = "setproctitle"
+version = "1.3.5"
+requires_python = ">=3.8"
+summary = "A Python module to customize the process title"
+groups = ["default"]
+files = [
+    {file = "setproctitle-1.3.5-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:523424b9be4dea97d95b8a584b183f35c7bab2d0a3d995b01febf5b8a8de90e4"},
+    {file = "setproctitle-1.3.5-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:b6ec1d86c1b4d7b5f2bdceadf213310cf24696b82480a2a702194b8a0bfbcb47"},
+    {file = "setproctitle-1.3.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ea6c505264275a43e9b2acd2acfc11ac33caf52bc3167c9fced4418a810f6b1c"},
+    {file = "setproctitle-1.3.5-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:0b91e68e6685998e6353f296100ecabc313a6cb3e413d66a03d74b988b61f5ff"},
+    {file = "setproctitle-1.3.5-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:bc1fda208ae3a2285ad27aeab44c41daf2328abe58fa3270157a739866779199"},
+    {file = "setproctitle-1.3.5-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:828727d220e46f048b82289018300a64547b46aaed96bf8810c05fe105426b41"},
+    {file = "setproctitle-1.3.5-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:83b016221cf80028b2947be20630faa14e3e72a403e35f0ba29550b4e856767b"},
+    {file = "setproctitle-1.3.5-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:6d8a411e752e794d052434139ca4234ffeceeb8d8d8ddc390a9051d7942b2726"},
+    {file = "setproctitle-1.3.5-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:50cfbf86b9c63a2c2903f1231f0a58edeb775e651ae1af84eec8430b0571f29b"},
+    {file = "setproctitle-1.3.5-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:f3b5e2eacd572444770026c9dd3ddc7543ce427cdf452d40a408d1e95beefb30"},
+    {file = "setproctitle-1.3.5-cp312-cp312-win32.whl", hash = "sha256:cf4e3ded98027de2596c6cc5bbd3302adfb3ca315c848f56516bb0b7e88de1e9"},
+    {file = "setproctitle-1.3.5-cp312-cp312-win_amd64.whl", hash = "sha256:f7a8c01ffd013dda2bed6e7d5cb59fbb609e72f805abf3ee98360f38f7758d9b"},
+    {file = "setproctitle-1.3.5.tar.gz", hash = "sha256:1e6eaeaf8a734d428a95d8c104643b39af7d247d604f40a7bebcf3960a853c5e"},
+]
+
+[[package]]
 name = "setuptools"
 version = "75.8.2"
 requires_python = ">=3.9"
 summary = "Easily download, build, install, upgrade, and uninstall Python packages"
 groups = ["default"]
-marker = "python_version >= \"3.12\""
 files = [
     {file = "setuptools-75.8.2-py3-none-any.whl", hash = "sha256:558e47c15f1811c1fa7adbd0096669bf76c1d3f433f58324df69f3f5ecac4e8f"},
     {file = "setuptools-75.8.2.tar.gz", hash = "sha256:4880473a969e5f23f2a2be3646b2dfd84af9028716d398e46192f84bc36900d2"},
@@ -1408,6 +1658,17 @@ groups = ["default", "dev"]
 files = [
     {file = "six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"},
     {file = "six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"},
+]
+
+[[package]]
+name = "smmap"
+version = "5.0.2"
+requires_python = ">=3.7"
+summary = "A pure Python implementation of a sliding window memory map manager"
+groups = ["default"]
+files = [
+    {file = "smmap-5.0.2-py3-none-any.whl", hash = "sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e"},
+    {file = "smmap-5.0.2.tar.gz", hash = "sha256:26ea65a03958fa0c8a1c7e8c7a58fdc77221b8910f6be2131affade476898ad5"},
 ]
 
 [[package]]
@@ -1593,6 +1854,23 @@ files = [
 ]
 
 [[package]]
+name = "trl"
+version = "0.15.2"
+requires_python = ">=3.9"
+summary = "Train transformer language models with reinforcement learning."
+groups = ["default"]
+dependencies = [
+    "accelerate>=0.34.0",
+    "datasets>=2.21.0",
+    "rich",
+    "transformers>=4.46.0",
+]
+files = [
+    {file = "trl-0.15.2-py3-none-any.whl", hash = "sha256:bf2b88e3cf5da08cd533dc03273d977965bd5d86c5878f76285fba45d9cb9634"},
+    {file = "trl-0.15.2.tar.gz", hash = "sha256:0f82190a058a0a194dbcfae1fe9548b68a0a05b2f4d1824f8db1ae7d949cdd47"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.12.2"
 requires_python = ">=3.8"
@@ -1626,10 +1904,49 @@ files = [
 ]
 
 [[package]]
+name = "wandb"
+version = "0.19.8"
+requires_python = ">=3.8"
+summary = "A CLI and library for interacting with the Weights & Biases API."
+groups = ["default"]
+dependencies = [
+    "click!=8.0.0,>=7.1",
+    "docker-pycreds>=0.4.0",
+    "eval-type-backport; python_version < \"3.10\"",
+    "gitpython!=3.1.29,>=1.0.0",
+    "platformdirs",
+    "protobuf!=4.21.0,!=5.28.0,<6,>=3.12.0; python_version < \"3.9\" and sys_platform == \"linux\"",
+    "protobuf!=4.21.0,!=5.28.0,<6,>=3.15.0; python_version == \"3.9\" and sys_platform == \"linux\"",
+    "protobuf!=4.21.0,!=5.28.0,<6,>=3.19.0; python_version > \"3.9\" and sys_platform == \"linux\"",
+    "protobuf!=4.21.0,!=5.28.0,<6,>=3.19.0; sys_platform != \"linux\"",
+    "psutil>=5.0.0",
+    "pydantic<3,>=2.6",
+    "pyyaml",
+    "requests<3,>=2.0.0",
+    "sentry-sdk>=2.0.0",
+    "setproctitle",
+    "setuptools",
+    "typing-extensions<5,>=4.4; python_version < \"3.12\"",
+]
+files = [
+    {file = "wandb-0.19.8-py3-none-any.whl", hash = "sha256:75dea834d579f38e0e1f857e644020e22c851f9b920e9c6c6345bacb98c3f3fc"},
+    {file = "wandb-0.19.8-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:6556147ba33b7ff4a0111bb6bf5ea485e4974c22f520f1e2a5eaad670a058c80"},
+    {file = "wandb-0.19.8-py3-none-macosx_11_0_arm64.whl", hash = "sha256:f68517c2059d12912a90ae32ce95a2711e39f6c157c759eb191527739a12db8b"},
+    {file = "wandb-0.19.8-py3-none-macosx_11_0_x86_64.whl", hash = "sha256:96cb534b19c2d301ac4fb0e7cfbc32198a704e29e87337133d6b71fdad33cf2f"},
+    {file = "wandb-0.19.8-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1781b36434d494d6b34e2149201bae8cab960cb31571f11b981c4a62462d5af8"},
+    {file = "wandb-0.19.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c25f0e40025b838b7a424b51837a2a5fd071686c59e1c46d73f04e760d305f79"},
+    {file = "wandb-0.19.8-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:068eb0154f80be973ab291346d831e9cc80a9de1b8752bdeb48a997c3506fec4"},
+    {file = "wandb-0.19.8-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:82a956150e53df0b4c193933b3e62c3e8255dc8b43bb187270939ef35b03fda3"},
+    {file = "wandb-0.19.8-py3-none-win32.whl", hash = "sha256:9d71f153cb9330e307b1b054be01971a1bd164fb9bd4190d7f57989c2d6b86e8"},
+    {file = "wandb-0.19.8-py3-none-win_amd64.whl", hash = "sha256:f7da8e6fc6693014c72fb7db3ecd5e1116066198d2aca96f6eb7220cea03081c"},
+    {file = "wandb-0.19.8.tar.gz", hash = "sha256:3a4844bb38758657b94b090e72ee355fe5b926e3a048232f0ca4248f801d8d80"},
+]
+
+[[package]]
 name = "wcwidth"
 version = "0.2.13"
 summary = "Measures the displayed width of unicode strings in a terminal"
-groups = ["dev"]
+groups = ["default", "dev"]
 dependencies = [
     "backports-functools-lru-cache>=1.2.1; python_version < \"3.2\"",
 ]
