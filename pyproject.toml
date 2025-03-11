@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "repetitioestmaterstudiorum", email = "44611591+repetitioestmaterstudiorum@users.noreply.github.com"},
 ]
-dependencies = ["torch>=2.6.0", "transformers>=4.49.0", "huggingface-hub[cli]>=0.29.2", "tqdm>=4.67.1", "datasets>=3.3.2", "accelerate>=1.4.0", "numpy>=2.2.3", "evaluate>=0.4.3", "scikit-learn>=1.6.1", "trl>=0.15.2", "wandb>=0.19.8"]
+dependencies = ["torch>=2.6.0", "transformers>=4.49.0", "huggingface-hub[cli]>=0.29.2", "tqdm>=4.67.1", "datasets>=3.3.2", "accelerate>=1.4.0", "numpy>=2.2.3", "evaluate>=0.4.3", "scikit-learn>=1.6.1", "trl>=0.15.2", "wandb>=0.19.8", "peft>=0.14.0"]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}

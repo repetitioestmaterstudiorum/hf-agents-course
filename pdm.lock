@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:927e36c0dcd552e6c18ca6c53993120935aad1b21f0f108729aea204ee78bd39"
+content_hash = "sha256:fd437635ca7e0481f6007809ef9b42ef9aba2e2fb50a8af976ef4ac02113cd14"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -1125,6 +1125,29 @@ groups = ["dev"]
 files = [
     {file = "parso-0.8.4-py2.py3-none-any.whl", hash = "sha256:a418670a20291dacd2dddc80c377c5c3791378ee1e8d12bffc35420643d43f18"},
     {file = "parso-0.8.4.tar.gz", hash = "sha256:eb3a7b58240fb99099a345571deecc0f9540ea5f4dd2fe14c2a99d6b281ab92d"},
+]
+
+[[package]]
+name = "peft"
+version = "0.14.0"
+requires_python = ">=3.9.0"
+summary = "Parameter-Efficient Fine-Tuning (PEFT)"
+groups = ["default"]
+dependencies = [
+    "accelerate>=0.21.0",
+    "huggingface-hub>=0.25.0",
+    "numpy>=1.17",
+    "packaging>=20.0",
+    "psutil",
+    "pyyaml",
+    "safetensors",
+    "torch>=1.13.0",
+    "tqdm",
+    "transformers",
+]
+files = [
+    {file = "peft-0.14.0-py3-none-any.whl", hash = "sha256:2f04f3a870c3baf30f15e7dcaa5dd70d3e54cfdd146d3c6c187735d3ae0a0700"},
+    {file = "peft-0.14.0.tar.gz", hash = "sha256:546d69af7b42f5ef715a3d3261ed818bc917ae6055e5d7e187ed3f2c76ad72dc"},
 ]
 
 [[package]]
