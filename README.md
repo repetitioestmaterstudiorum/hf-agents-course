@@ -1,6 +1,12 @@
 # hf-agents-course
 
-HuggingFace Agents Course Code
+HuggingFace Agents Course Code.
+
+Also revised SFT and LoRa to fine-tune LLMs to use tools.
+
+Comparing SFT with LoRa (1000 steps) - see `sft` and `lora` folders:
+
+![Comparing SFT with LoRa (1000 steps) - see `sft` and `lora` folders](./assets/1000-steps-sft-vs-sft-with-lora.png)
 
 ## Setup
 
@@ -24,4 +30,3 @@ At the moment of documenting this, the following agents (running on HF spaces) a
 ## Useful Stuff
 
 `watch -n 1 nvidia-smi`
-https://wandb.ai/embereagle/projects
