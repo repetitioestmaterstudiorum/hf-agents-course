@@ -1,0 +1,9 @@
+{
+  "name": "Debian Bookworm Slim PDM Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "postCreateCommand": "pdm python install 3.12 && pdm install",
+  "remoteUser": "root"
+}

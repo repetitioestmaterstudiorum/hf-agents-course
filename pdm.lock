@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:fd437635ca7e0481f6007809ef9b42ef9aba2e2fb50a8af976ef4ac02113cd14"
+content_hash = "sha256:caa0edbcc5403a58d2a040cff4f53bc3a857dad2c2e38e5d0f5bee8c6175bc2d"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -137,6 +137,21 @@ groups = ["default", "dev"]
 files = [
     {file = "attrs-25.1.0-py3-none-any.whl", hash = "sha256:c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"},
     {file = "attrs-25.1.0.tar.gz", hash = "sha256:1c97078a80c814273a76b2a298a932eb681c87415c11dee0a6921de7f1b02c3e"},
+]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.13.3"
+requires_python = ">=3.7.0"
+summary = "Screen-scraping library"
+groups = ["default"]
+dependencies = [
+    "soupsieve>1.2",
+    "typing-extensions>=4.0.0",
+]
+files = [
+    {file = "beautifulsoup4-4.13.3-py3-none-any.whl", hash = "sha256:99045d7d3f08f91f0d656bc9b7efbae189426cd913d830294a15eefa0ea4df16"},
+    {file = "beautifulsoup4-4.13.3.tar.gz", hash = "sha256:1bd32405dacc920b42b83ba01644747ed77456a65760e285fbc47633ceddaf8b"},
 ]
 
 [[package]]
@@ -315,6 +330,22 @@ dependencies = [
 files = [
     {file = "docker-pycreds-0.4.0.tar.gz", hash = "sha256:6ce3270bcaf404cc4c3e27e4b6c70d3521deae82fb508767870fdbf772d584d4"},
     {file = "docker_pycreds-0.4.0-py2.py3-none-any.whl", hash = "sha256:7266112468627868005106ec19cd0d722702d2b7d5912a28e19b826c3d37af49"},
+]
+
+[[package]]
+name = "duckduckgo-search"
+version = "7.5.1"
+requires_python = ">=3.9"
+summary = "Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine."
+groups = ["default"]
+dependencies = [
+    "click>=8.1.8",
+    "lxml>=5.3.0",
+    "primp>=0.14.0",
+]
+files = [
+    {file = "duckduckgo_search-7.5.1-py3-none-any.whl", hash = "sha256:66edb228eed4a32d1f8437ce1d0ff9468f9eba6678c1685e7b43e80156cdc66e"},
+    {file = "duckduckgo_search-7.5.1.tar.gz", hash = "sha256:54d18bfcda75c485232a868552bea1cc7c52d82472a73f0c7791613e98d32137"},
 ]
 
 [[package]]
@@ -719,6 +750,33 @@ files = [
 ]
 
 [[package]]
+name = "lxml"
+version = "5.3.1"
+requires_python = ">=3.6"
+summary = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
+groups = ["default"]
+files = [
+    {file = "lxml-5.3.1-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:e69add9b6b7b08c60d7ff0152c7c9a6c45b4a71a919be5abde6f98f1ea16421c"},
+    {file = "lxml-5.3.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:4e52e1b148867b01c05e21837586ee307a01e793b94072d7c7b91d2c2da02ffe"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a4b382e0e636ed54cd278791d93fe2c4f370772743f02bcbe431a160089025c9"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c2e49dc23a10a1296b04ca9db200c44d3eb32c8d8ec532e8c1fd24792276522a"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:4399b4226c4785575fb20998dc571bc48125dc92c367ce2602d0d70e0c455eb0"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:5412500e0dc5481b1ee9cf6b38bb3b473f6e411eb62b83dc9b62699c3b7b79f7"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1c93ed3c998ea8472be98fb55aed65b5198740bfceaec07b2eba551e55b7b9ae"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:63d57fc94eb0bbb4735e45517afc21ef262991d8758a8f2f05dd6e4174944519"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_28_ppc64le.whl", hash = "sha256:b450d7cabcd49aa7ab46a3c6aa3ac7e1593600a1a0605ba536ec0f1b99a04322"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_28_s390x.whl", hash = "sha256:4df0ec814b50275ad6a99bc82a38b59f90e10e47714ac9871e1b223895825468"},
+    {file = "lxml-5.3.1-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:d184f85ad2bb1f261eac55cddfcf62a70dee89982c978e92b9a74a1bfef2e367"},
+    {file = "lxml-5.3.1-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:b725e70d15906d24615201e650d5b0388b08a5187a55f119f25874d0103f90dd"},
+    {file = "lxml-5.3.1-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:a31fa7536ec1fb7155a0cd3a4e3d956c835ad0a43e3610ca32384d01f079ea1c"},
+    {file = "lxml-5.3.1-cp312-cp312-musllinux_1_2_s390x.whl", hash = "sha256:3c3c8b55c7fc7b7e8877b9366568cc73d68b82da7fe33d8b98527b73857a225f"},
+    {file = "lxml-5.3.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:d61ec60945d694df806a9aec88e8f29a27293c6e424f8ff91c80416e3c617645"},
+    {file = "lxml-5.3.1-cp312-cp312-win32.whl", hash = "sha256:f4eac0584cdc3285ef2e74eee1513a6001681fd9753b259e8159421ed28a72e5"},
+    {file = "lxml-5.3.1-cp312-cp312-win_amd64.whl", hash = "sha256:29bfc8d3d88e56ea0a27e7c4897b642706840247f59f4377d81be8f32aa0cfbf"},
+    {file = "lxml-5.3.1.tar.gz", hash = "sha256:106b7b5d2977b339f1e97efe2778e2ab20e99994cbb0ec5e55771ed0795920c8"},
+]
+
+[[package]]
 name = "markdown-it-py"
 version = "3.0.0"
 requires_python = ">=3.8"
@@ -730,6 +788,20 @@ dependencies = [
 files = [
     {file = "markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"},
     {file = "markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1"},
+]
+
+[[package]]
+name = "markdownify"
+version = "1.1.0"
+summary = "Convert HTML to markdown."
+groups = ["default"]
+dependencies = [
+    "beautifulsoup4<5,>=4.9",
+    "six<2,>=1.15",
+]
+files = [
+    {file = "markdownify-1.1.0-py3-none-any.whl", hash = "sha256:32a5a08e9af02c8a6528942224c91b933b4bd2c7d078f9012943776fc313eeef"},
+    {file = "markdownify-1.1.0.tar.gz", hash = "sha256:449c0bbbf1401c5112379619524f33b63490a8fa479456d41de9dc9e37560ebd"},
 ]
 
 [[package]]
@@ -1176,6 +1248,27 @@ files = [
 ]
 
 [[package]]
+name = "pillow"
+version = "11.1.0"
+requires_python = ">=3.9"
+summary = "Python Imaging Library (Fork)"
+groups = ["default"]
+files = [
+    {file = "pillow-11.1.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:2062ffb1d36544d42fcaa277b069c88b01bb7298f4efa06731a7fd6cc290b81a"},
+    {file = "pillow-11.1.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:a85b653980faad27e88b141348707ceeef8a1186f75ecc600c395dcac19f385b"},
+    {file = "pillow-11.1.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9409c080586d1f683df3f184f20e36fb647f2e0bc3988094d4fd8c9f4eb1b3b3"},
+    {file = "pillow-11.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7fdadc077553621911f27ce206ffcbec7d3f8d7b50e0da39f10997e8e2bb7f6a"},
+    {file = "pillow-11.1.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:93a18841d09bcdd774dcdc308e4537e1f867b3dec059c131fde0327899734aa1"},
+    {file = "pillow-11.1.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:9aa9aeddeed452b2f616ff5507459e7bab436916ccb10961c4a382cd3e03f47f"},
+    {file = "pillow-11.1.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:3cdcdb0b896e981678eee140d882b70092dac83ac1cdf6b3a60e2216a73f2b91"},
+    {file = "pillow-11.1.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:36ba10b9cb413e7c7dfa3e189aba252deee0602c86c309799da5a74009ac7a1c"},
+    {file = "pillow-11.1.0-cp312-cp312-win32.whl", hash = "sha256:cfd5cd998c2e36a862d0e27b2df63237e67273f2fc78f47445b14e73a810e7e6"},
+    {file = "pillow-11.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:a697cd8ba0383bba3d2d3ada02b34ed268cb548b369943cd349007730c92bddf"},
+    {file = "pillow-11.1.0-cp312-cp312-win_arm64.whl", hash = "sha256:4dd43a78897793f60766563969442020e90eb7847463eca901e41ba186a7d4a5"},
+    {file = "pillow-11.1.0.tar.gz", hash = "sha256:368da70808b36d73b4b390a8ffac11069f8a5c85f29eff1f1b01bcf3ef5b2a20"},
+]
+
+[[package]]
 name = "platformdirs"
 version = "4.3.6"
 requires_python = ">=3.8"
@@ -1199,6 +1292,24 @@ dependencies = [
 files = [
     {file = "plotly-6.0.0-py3-none-any.whl", hash = "sha256:f708871c3a9349a68791ff943a5781b1ec04de7769ea69068adcd9202e57653a"},
     {file = "plotly-6.0.0.tar.gz", hash = "sha256:c4aad38b8c3d65e4a5e7dd308b084143b9025c2cc9d5317fc1f1d30958db87d3"},
+]
+
+[[package]]
+name = "primp"
+version = "0.14.0"
+requires_python = ">=3.8"
+summary = "HTTP client that can impersonate web browsers, mimicking their headers and `TLS/JA3/JA4/HTTP2` fingerprints"
+groups = ["default"]
+files = [
+    {file = "primp-0.14.0-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:bd2dfb57feeba21a77a1128b6c6f17856605c4e73edcc05764fb134de4ff014f"},
+    {file = "primp-0.14.0-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:31eecb5316f9bd732a7994530b85eb698bf6500d2f6c5c3382dac0353f77084e"},
+    {file = "primp-0.14.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:11229e65aa5755fdfb535cc03fd64259a06764ad7c22e650fb3bea51400f1d09"},
+    {file = "primp-0.14.0-cp38-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:8f56ca2cd63f9ac75b33bf48129b7e79ade29cf280bc253b17b052afb27d2b9e"},
+    {file = "primp-0.14.0-cp38-abi3-manylinux_2_34_armv7l.whl", hash = "sha256:3fb204f67a4b58dc53f3452143121317b474437812662ac0149d332a77ecbe1a"},
+    {file = "primp-0.14.0-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:b0b21e6a599f580137774623009c7f895afab49d6c3d6c9a28344fd2586ebe8a"},
+    {file = "primp-0.14.0-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:6549766ece3c7be19e1c16fa9029d3e50fa73628149d88601fcd964af8b44a8d"},
+    {file = "primp-0.14.0-cp38-abi3-win_amd64.whl", hash = "sha256:d3ae1ba954ec8d07abb527ccce7bb36633525c86496950ba0178e44a0ea5c891"},
+    {file = "primp-0.14.0.tar.gz", hash = "sha256:b6f23b2b694118a9d0443b3760698b90afb6f867f8447e71972530f48297992e"},
 ]
 
 [[package]]
@@ -1392,6 +1503,17 @@ dependencies = [
 files = [
     {file = "python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"},
     {file = "python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"},
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+requires_python = ">=3.8"
+summary = "Read key-value pairs from a .env file and set them as environment variables"
+groups = ["default"]
+files = [
+    {file = "python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"},
+    {file = "python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"},
 ]
 
 [[package]]
@@ -1692,6 +1814,39 @@ groups = ["default"]
 files = [
     {file = "smmap-5.0.2-py3-none-any.whl", hash = "sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e"},
     {file = "smmap-5.0.2.tar.gz", hash = "sha256:26ea65a03958fa0c8a1c7e8c7a58fdc77221b8910f6be2131affade476898ad5"},
+]
+
+[[package]]
+name = "smolagents"
+version = "1.10.0"
+requires_python = ">=3.10"
+summary = "🤗 smolagents: a barebones library for agents. Agents write python code to call tools or orchestrate other agents."
+groups = ["default"]
+dependencies = [
+    "duckduckgo-search>=6.3.7",
+    "huggingface-hub>=0.28.0",
+    "jinja2>=3.1.4",
+    "markdownify>=0.14.1",
+    "pandas>=2.2.3",
+    "pillow>=11.0.0",
+    "python-dotenv",
+    "requests>=2.32.3",
+    "rich>=13.9.4",
+]
+files = [
+    {file = "smolagents-1.10.0-py3-none-any.whl", hash = "sha256:e6d4161c3836fdfaac5f24854ad23a77443f1ac056e151525806ca33ade62a41"},
+    {file = "smolagents-1.10.0.tar.gz", hash = "sha256:d2ec37b92d5abf3a586206088d7cff3598e70fd79b3b42eeaf93848e0f9cc150"},
+]
+
+[[package]]
+name = "soupsieve"
+version = "2.6"
+requires_python = ">=3.8"
+summary = "A modern CSS selector implementation for Beautiful Soup."
+groups = ["default"]
+files = [
+    {file = "soupsieve-2.6-py3-none-any.whl", hash = "sha256:e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"},
+    {file = "soupsieve-2.6.tar.gz", hash = "sha256:e2e68417777af359ec65daac1057404a3c8a5455bb8abc36f1a9866ab1a51abb"},
 ]
 
 [[package]]
