@@ -10,8 +10,10 @@ Comparing SFT with LoRa (1000 steps) - see `sft` and `lora` folders:
 
 ## Setup
 
-1. Make sure you have pdm installed (macOS: `brew install pdm`).
-2. `pdm install`
+- Make sure you have pdm installed (macOS: `brew install pdm`).
+- `pdm python install 3.12`
+- `pdm install` # this creates a .venv that can be selected to execute notebooks
+- Execute notebooks or run Python files using pdm `pdm run <filename>`
 
 ## Sub-Repositories
 

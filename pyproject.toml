@@ -18,7 +18,7 @@ dependencies = [
     "trl>=0.15.2",
     "wandb>=0.19.8",
     "peft>=0.14.0",
-    "smolagents>=1.10.0"
+    "smolagents[openai]>=1.10.0"
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
